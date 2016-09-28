@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 
 
 gem 'twitter-bootstrap-rails'
-gem 'mysql2', '0.3.19'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
 # Use sqlite3 as the database for Active Record
@@ -36,6 +35,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'mysql2', '0.3.19'
   gem 'byebug'
 end
 
@@ -45,5 +45,10 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+end
+
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
 end
 
